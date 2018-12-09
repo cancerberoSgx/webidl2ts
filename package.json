@@ -2,7 +2,7 @@
   "name": "webidl2ts",
   "version": "1.0.0",
   "description": "using webidl2 to parse web IDL code it generates TypeScript declarations (.d.ts files)",
-  "main": "demo/index.html",
+  "main": "src/webidl2ts.js",
   "scripts": {
     "start": "parcel demo/index.html --open",
     "build": "parcel build demo/index.html"
