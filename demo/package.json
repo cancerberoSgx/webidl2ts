@@ -1,0 +1,11 @@
+{
+  "name": "webidl2ts-demo",
+  "version": "1.0.0",
+  "description": "Simple Parcel Sandbox",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx parcel index.html --open",
+    "build": "npx parcel build index.html"
+  },
+  "dependencies": {}
+}

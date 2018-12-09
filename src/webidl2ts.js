@@ -7,7 +7,7 @@ import { parse } from "webidl2";
  * @returns {string}
  * @throws {Error}
  */
-export function idl2ts(unparsed /* : string */) /* : void */ {
+export function webidl2ts(unparsed /* : string */) /* : void */ {
   const idlDefinitions = parse(unparsed);
   const typescript = `${printIDLDefinitions(idlDefinitions)}`;
   return typescript;
