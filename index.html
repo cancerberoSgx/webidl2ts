@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>webidl2 parser demo</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<h1><a href="https://github.com/w3c/webidl2.js">webidl2 IDL parser demo</h1>
+	Input IDL code:
+	<textarea id="input">
+[extended_attributes]
+interface identifier {
+  /* interface_members... */
+};
+
+// Typedef identifier: "number"
+typedef double number;
+
+// Interface identifier: "System"
+[Exposed=Window]
+interface System {
+
+  // Operation identifier:          "createObject"
+  // Operation argument identifier: "interface"
+  object createObject(DOMString _interface);
+
+  // Operation argument identifier: "interface"
+  sequence&lt;object> getObjects(DOMString interface);
+
+  // Operation has no identifier; it declares a getter.
+  getter DOMString (DOMString keyName);
+};
+
+// Interface identifier: "TextField"
+[Exposed=Window]
+interface TextField {
+
+  // Attribute identifier: "const"
+  attribute boolean _const;
+
+  // Attribute identifier: "value"
+  attribute DOMString? _value;
+};
+</textarea>
+
+Parsed IDL output (JSON):
+<textarea id="outputAST"></textarea> 
+
+Parsed IDL transformed to TypeScript definitions (.d.ts file)
+<textarea id="outputTS"></textarea> 
+
+	<script src="src/index.js">
+	</script>
+</body>
+
+</html>
